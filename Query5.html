@@ -1,0 +1,40 @@
+<!DOCTYPE Html>
+<html>
+<head>
+	<title> Order History </title>
+	<meta http-equiv = "Content-type" content = "text/html;charset=utf-8"/>
+</head>
+<body>
+	<a href = "/"> Home </a>
+	<br></br>
+	<table border = 1>
+		<tr>
+			<th>Order_title</th> <th>Order_date</th> <th>Price</th> <th>Unit_selling_price</th>
+			<th>Total_quantity</th> <th>Order_value</th> <th>Shop_name</th>
+		</tr>
+		{% for row in rows %}
+			<tr>
+				{% for item in row %}
+					<td>
+						{{item}}
+					</td>
+				{% endfor %}
+			</tr>
+		{% endfor %}
+	</table>
+	<table border = 1> 
+		<tr>
+			<th>Total_copies_ordered</th> <th>Total_selling_value</th>
+		</tr>
+		{% for row in summary %}
+			<tr>
+				{% for item in row %}
+					<td>
+						{{item}}
+					</td>
+				{% endfor %}
+			</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>

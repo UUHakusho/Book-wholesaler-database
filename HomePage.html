@@ -1,0 +1,78 @@
+<!DOCTYPE Html>
+<html>
+<head>
+	<title> Home Page </title>
+	<meta http-equiv = "Content-type" content = "text/html;charset=utf-8"/>
+	<!--<meta charset = "utf-8"/> -->
+</head>
+<body>
+	<h1> Home Page </h1>
+	<br>
+	<h2> 1. Insert a new record into Category </h2>
+	<form action = "Q1" method = "POST"> <br> <!-- Q1 = Query 1 -->
+		Category ID <input type = "text" name = "categoryid"><br>
+		Name <input type = "text" name = "name"><br>
+		Category Type <input type = "text" name = "categorytype"><br>
+		<input type = "submit" value = "Execute">
+	</form>
+	{{msg1}}<br>
+	{{error1}}
+	<br>
+	<h2> 2. Delete a record from Category </h2>
+	<form action = "Q2" method = "POST"> <br>
+		CategoryID <input type = "text" name = "categoryid"><br>
+		<input type = "submit" value = "Execute">
+	</form>
+	{{msg2}}<br>
+	{{error2}}
+	<br>
+	<h2> 3. Book Summary </h2>
+	<form action = "Q3" method = "POST"> <br>
+		<input type = "submit" value = "Execute">
+	</form>
+	{{msg3}}<br>
+	{{error3}}
+	<br>
+	<h2> 4. Report of Books ordered by year and month </h2>
+	<form action = "Q4" method = "POST"> <br>
+		Publisher Name <input type = "text" name = "publishername"><br>
+		<input type = "submit" value = "Execute">
+	</form>
+	{{msg4}}<br>
+	{{error4}}
+	<br>
+	<h2> 5. Order History </h2>
+	<form action = "Q5" method = "POST"> <br>
+		Book ID <input type = "text" name = "bookid"><br>
+		<input type = "submit" value = "Execute">
+	</form>
+	{{msg5}}<br>
+	{{error5}}
+	<br>
+	<h2> 6. Salesrep performances </h2>
+	<form action = "Q6" method = "POST"> <br>
+		Start date <input type = "text" name = "startdate" placeholder = "YYYY-MM-DD"><br>
+		End date <input type = "text" name = "enddate" placeholder = "YYYY-MM-DD"><br>
+		<input type = "submit" value = "Execute">
+	</form>
+	{{msg6}}<br>
+	{{error6}}
+	<br>
+	<h2> 7. Add discount to price </h2>
+	<form action = "Q7" method = "POST"> <br>
+		Category ID <input type = "text" name = "categoryid"><br>
+		Percentage (in decimal) of what you want off the Price <input type = "text" name = "discount"><br>
+		<input type = "submit" value = "Execute">
+	</form>
+	{{msg7}}<br>
+	{{error7}}
+	<br>
+	<form action = "sort" method = "get" >
+		First<input type = "text" name = "number1">
+		Second<input type = "text" name = "number2"><br>
+		<input type="radio" name="action" value="asc"> Ascending </input><br>
+		<input type="radio" name="action" value="dec"> Descending</input><br>
+		<input type = "submit" value = "calculate" >
+	</form>
+</body>
+</html>
